@@ -1,0 +1,33 @@
+@import "../Style.less";
+
+.home-page {
+  height: 100vh;
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
+  .ant-layout.ant-layout-has-sider {
+    min-height: 100%;
+
+    .ant-layout-sider {
+      background: @background-gray;
+      .ant-layout-sider-children {
+        .logo-position {
+          width: 100%;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .logo {
+            width: 95%;
+          }
+          .logo-collapsed {
+            width: 85%;
+          }
+        }
+      }
+      .ant-layout-sider-trigger {
+        background: @background-gray;
+      }
+    }
+  }
+}
