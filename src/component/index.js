@@ -1,15 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route, Redirect } from "react-router-dom";
-import Home from "./page/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./page/Home";
+import CoursePage from "./page/Course";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/course" element={<CoursePage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 

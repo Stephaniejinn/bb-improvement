@@ -1,10 +1,11 @@
 import React from "react";
 import { Menu, Dropdown, Typography, Divider, Avatar, Button } from "antd";
 import {
-  SkinOutlined,
+  SettingOutlined,
   ExportOutlined,
   UserOutlined,
   BankOutlined,
+  IdcardOutlined,
 } from "@ant-design/icons";
 
 import "./style.less";
@@ -28,6 +29,12 @@ const MyAvatar = () => {
         </Text>
       </Menu.Item>
       <Menu.Item>
+        <IdcardOutlined />
+        <Text type="secondary" strong style={{ paddingLeft: 8 }}>
+          123456789
+        </Text>
+      </Menu.Item>
+      <Menu.Item>
         <BankOutlined />
         <Text type="secondary" strong style={{ paddingLeft: 8 }}>
           Computer Science
@@ -35,8 +42,8 @@ const MyAvatar = () => {
       </Menu.Item>
       <Divider />
       <Menu.Item>
-        <SkinOutlined style={{ marginRight: 8 }} />
-        Personalization
+        <SettingOutlined style={{ marginRight: 8 }} />
+        Setting
       </Menu.Item>
       <Divider />
       <Menu.Item>

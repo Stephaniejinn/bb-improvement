@@ -1,31 +1,56 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import { Layout, Menu } from "antd";
+import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
+import { Menu } from "antd";
 import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
+  HomeOutlined,
+  CalendarOutlined,
+  ReadOutlined,
+  CustomerServiceOutlined,
+  FileTextOutlined,
+  RiseOutlined,
+  NotificationOutlined,
+  FolderOpenOutlined,
+  EditOutlined,
 } from "@ant-design/icons";
 // import "./style.less";
 
 const MySider = () => {
+  const { pathname: path } = window.location;
+
   return (
     <Menu
       theme="dark"
       mode="inline"
-      defaultSelectedKeys={["1"]}
+      defaultSelectedKeys={["/"]}
+      selectedKeys={path}
       style={{ background: "#2b2828" }}
     >
-      <Menu.Item key="1" icon={<UserOutlined />}>
-        nav 1
+      <Menu.Item key="/" icon={<HomeOutlined />}>
+        <Link to="/">Home</Link>
       </Menu.Item>
-      <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-        nav 2
+      <Menu.Item key="/course" icon={<FileTextOutlined />}>
+        <Link to="/course">Course</Link>
       </Menu.Item>
-      <Menu.Item key="3" icon={<UploadOutlined />}>
-        nav 3
+      <Menu.Item key="3" icon={<NotificationOutlined />}>
+        Annoucement
+      </Menu.Item>
+      <Menu.Item key="4" icon={<EditOutlined />}>
+        Assignment
+      </Menu.Item>
+      <Menu.Item key="5" icon={<RiseOutlined />}>
+        Grade
+      </Menu.Item>
+      <Menu.Item key="6" icon={<FolderOpenOutlined />}>
+        Material
+      </Menu.Item>
+      <Menu.Item key="7" icon={<CalendarOutlined />}>
+        Calendar
+      </Menu.Item>
+      <Menu.Item key="8" icon={<ReadOutlined />}>
+        Library
+      </Menu.Item>
+      <Menu.Item key="9" icon={<CustomerServiceOutlined />}>
+        Student Service
       </Menu.Item>
     </Menu>
   );
